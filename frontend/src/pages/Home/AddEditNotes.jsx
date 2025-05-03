@@ -58,9 +58,9 @@ export default function AddEditNotes({ noteData, getAllNotes, type, onClose }) {
       });
 
       if (response.data.success) {
-        toast.success("Note updated successfully");
-        getAllNotes();
+        await getAllNotes();
         onClose();
+        toast.success("Note updated successfully");
       }
     } catch (error) {
       if (
